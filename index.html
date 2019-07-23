@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+<script>
+var Shake = require('shake.js');
+
+var myShakeEvent = new Shake({
+	threshold: 15
+});
+    // start listening to device motion
+myShakeEvent.start();
+// register a shake event
+window.addEventListener('shake', shakeEventDidOccur, false);
+//shake event callback
+function shakeEventDidOccur () {
+	//put your own code here etc.
+	alert('Shake!');
+}
+</script>
+</body>
+</html>
